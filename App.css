@@ -1,0 +1,108 @@
+
+.App img {
+  max-width: 100%;  /* Ensures the image is not wider than its container */
+  height: auto;     /* Maintains aspect ratio */
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
+.App {
+  text-align: center;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding-top: 20px; /* Optional: Adds padding at the top of the app for better spacing */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #7EA1C6;  /* light blue */
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #7EA1C6;  /* light blue */
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-family: 'Roboto', sans-serif; /* Geometric sans-serif font */
+  font-weight: bold;  /* Makes the font bold */
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+input[type="range"] {
+  width: 300px; /* Makes the range input wider */
+}
+
+.special-background {
+  background-image: url('/public/background.jpg'); /* Set the background image */
+  background-size: cover;
+  background-position: center;
+}
+.number-effect {
+  transition: transform 0.3s ease-in-out;
+}
+.number-effect-active {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.5); /* Makes the number grow larger, adjust scale as needed */
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.number-animate {
+  animation: popEffect 0.5s ease-in-out;
+}
+input[type="range"] {
+  -webkit-appearance: none;  /* Removes default styling */
+  width: 300px; /* Adjust to fit your design */
+  height: 10px; /* Adjust height for your slider track */
+  background: #FFFFFF; /* Background of the track */
+}
+
+/* Chrome, Safari, Opera */
+/* Chrome, Safari, Opera */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;  /* Removes default styling */
+  appearance: none;
+  width: 40px;  /* Adjust size as needed */
+  height: 40px;  /* Should be same as width to maintain the aspect ratio */
+  background: url('/public/Dolly.png') no-repeat center center;  /* Ensures the image doesn't repeat and is centered */
+  background-size: cover;  /* Covers the entire area of the thumb */
+  border: none;  /* Optional: removes border if present */
+  cursor: pointer;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  background: url('/public/Dolly.png') no-repeat center center !important;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+
